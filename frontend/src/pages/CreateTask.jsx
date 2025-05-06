@@ -24,7 +24,7 @@ const CreateTask = () => {
   };
 
   const fetchUsers = async () => {
-    const API = 'http://localhost:5000/api/users';
+    const API = 'https://stamurai-task-management-system-backend.onrender.com/api/users';
 
     const options = {
         method: "GET",

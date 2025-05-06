@@ -26,7 +26,7 @@ const Register = () => {
     setError('');
     setSuccess('');
     try {
-      let url = 'http://localhost:5000/api/auth/register'
+      let url = 'https://stamurai-task-management-system-backend.onrender.com/api/auth/register'
 
       const options = {
         method: "POST",
