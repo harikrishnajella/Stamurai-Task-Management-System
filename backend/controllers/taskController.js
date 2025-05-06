@@ -2,7 +2,6 @@ const Task = require('../models/Task');
 
 // Create a task
 exports.createTask = async (req, res) => {
-    console.log(req.body)
   try {
     const { title, description, dueDate, priority, status, assignedTo, isRecurring, recurrencePattern } = req.body;
     const task = await Task.create({

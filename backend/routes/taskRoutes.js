@@ -5,12 +5,11 @@ const { protect } = require('../middlewares/authMiddleware');
 const { authorizeRoles } = require('../middlewares/roleMiddleware');
 
 router.use(protect);
-router.use(authorizeRoles('admin', 'manager'));
 
-router.post('/', createTask);
-router.get('/', getTasks);
-router.get('/:id', getTaskById);
+router.post('/',  createTask);
+router.get('/',  getTasks);
+router.get('/:id',  getTaskById);
 router.put('/:id', updateTask);
-router.delete('/:id', deleteTask);
+router.delete('/:id', authorizeRoles('admin', 'manager'), deleteTask);
 
 module.exports = router;
